@@ -33,7 +33,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 100px;
+  padding: 20px 80px;
   color: var(--color-1);
 }
 
@@ -255,7 +255,9 @@ footer {
     margin: 0 15px;
   }
 
-  #myBtn {
+  .top-btn button {
+    background-color: rgb(99, 18, 18);
+    color: white;
     display: none;
     position: fixed;
     bottom: 20px;
@@ -264,8 +266,6 @@ footer {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
-    color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
@@ -278,10 +278,14 @@ footer {
   border-radius: 40%;
 }
 
-@media (max-width: 1000px) {
+/* Адапатация */
+
+@media (max-width: 991px) {
   nav {
+    display: flex;
     flex-direction: column;
     align-items: flex;
+    padding: 20px 40px;
   }
   .menu ul {
     padding: 0;
@@ -305,13 +309,20 @@ footer {
   .side-2 img {
     width: 100%;
   }
-
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   .about-img img {
     width: 100%;
   }
+  .about-text p {
+    margin: 10% 0;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .logo {
     margin-top: 0;
   }
@@ -336,7 +347,7 @@ footer {
   }
   .about.section-padding {
     padding: 0;
-    margin-top: 200px;
+    margin-top: 50px;
   }
   .about-img img {
     width: 100%;
@@ -359,5 +370,18 @@ footer {
   }
   footer.section-padding {
     padding: 50px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  nav {
+    padding: 5px;
+  }
+
+  .menu {
+  }
+  .menu ul li a {
+    font-size: 10px;
+    padding: 5px;
   }
 }
